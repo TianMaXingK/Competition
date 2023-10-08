@@ -52,11 +52,12 @@ Ignoring the historical and constitutional significance of the "under God" line 
 如果秉持着应该批评不完美的心态，无疑会使得将来更少受害者敢于向公众发声。
 
 #### 评测指标描述
-两个子任务均以ROUGE-L值作为评测指标。
+两个子任务均以ROUGE-L值作为评测指标。以下为基线模型的分数：
 | Track | Model |Rouge-L Score|
 | ----- | ----- | ----|
 |  反论点生成  |   GPT-2    |  0.143    |
 |  论点生成    |   Mengzi   |  0.101    |
+
 **请注意：参赛模型的指标如果低于基线，则无法参与后续评奖。**
 
 ## 奖金
