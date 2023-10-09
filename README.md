@@ -479,7 +479,7 @@ Ignoring the historical and constitutional significance of the "under God" line 
 
 
 ## 奖金
-
+（待定）
 ## 报名网站
 [认知博弈评测报名表](https://docs.qq.com/form/page/DYVBhY09aV3dLakt4)
 
@@ -505,7 +505,7 @@ Ignoring the historical and constitutional significance of the "under God" line 
 ## 比赛结果
 
 ## 评测论坛安排
-
+（待定）
 ## 评测评委会委员
 李斌阳 魏忠钰 毛存礼 李岩 孔祥宇 柳明睿 陈蕾
 
