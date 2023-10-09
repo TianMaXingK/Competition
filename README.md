@@ -481,9 +481,8 @@ Ignoring the historical and constitutional significance of the "under God" line 
 ## 奖金
 
 ## 报名网站
-参赛数据集将会在填写报名表后1~2个工作日内发放
+参赛数据集将会在填写报名表后1~2个工作日内发放  
 [认知博弈评测报名表](https://docs.qq.com/form/page/DYVBhY09aV3dLakt4)
-【腾讯文档】
 
 ## 注意事项
 1.	本次评测使用的数据集由网络获取，仅限于本次技术评测及学术研究使用，未经许可不能作为商业用途或其他目的。
