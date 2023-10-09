@@ -1,7 +1,7 @@
 # 认知博弈评测
 
 ## 评测内容
-本届认知博弈评测共下设两个任务，分别为任务一：多模态谣言检测和任务二：智慧论辩，其相应的任务描述、数据集描述以及评测指标描述如下。
+本届认知博弈评测共下设两个任务，分别为任务一：多模态谣言检测和任务二：智慧论辩，其相应的任务描述、数据集描述、评测指标描述及提交格式描述如下。
 
 ### 任务一：多模态谣言检测
 随着互联网的快速发展和普及，社交媒体被广泛应用起来，这就为虚假信息传播提供了肥沃的温床，过多的虚假信息充斥社交媒体平台将误导公众舆论，损害企业形象，影响政治选举，对公民经济生活、公共安全和社会稳定构成巨大威胁。
@@ -18,6 +18,18 @@
 #### 评测指标描述
 本任务以Marco F1值作为评测指标。
 
+#### 提交格式
+评测使用邮箱提交结果。参赛队伍需要将包含结果文件的邮件发送至邮箱liumingrui@uir.edu.cn，邮件的标题为“Competition-参赛队名”，邮件附件为任务的结果文件。任务一结果文件为无BOM的以utf-8为编码格式的csv文件，使用逗号“,”作为分隔符，使用“\n”作为每行结尾的换行符，任务一的命名格式为：参赛队名_任务1.csv。
+
+例如：参赛队名为“Winners”，则任务1的提交文件名为“Winners_任务1.csv”，提交结果的样例格式如下（提交的结果文件格式不正确不予计算成绩）：
+
+| new_id | label |
+| ----- | ----- |
+|  1  |   TRUE    |
+|  2  |   FALSE   |
+| ... |    ...    |
+
+
 ### 任务二：智慧论辩
 论辩是人类智慧的一项重要技能，在诸多人类活动中承担着不可或缺的作用。计算论辩技术关注机器对人类论辩过程的理解和模仿， 广泛应用于决策辅助、写作支持和逻辑审查等场景，于近年来逐渐成为人工智能研究的新兴重要分支。本次智慧论辩任务关注中、英文辩论赛场景下的论辩挖掘， 鼓励参赛者使用计算论辩相关技术对辩论陈词中的论辩要点等成分做识别或生成，旨在推动计算论辩相关研究的发展，并试图为学界研究着与相关产业从业者提供良好的沟通交流平台。
 
@@ -32,8 +44,8 @@
 ##### 数据集描述
 该数据集为英文数据集，来源于ChangeMyView论坛(CMV)，标注员针对用户的交互内容进行了反驳关系标注，整理为带格式的txt文件。
 
-##### 输入样例
-输入：Should the phrase "under God" be retained in the Pledge of Allegiance?<tab>the under God line is actually a relatively new addition and can therefore be easily removed without significant consequences.
+##### 数据样例
+输入：Should the phrase "under God" be retained in the Pledge of Allegiance?<tab>the under God line is actually a relatively new addition and can therefore be easily removed without significant consequences.  
 输出：
 Just because something is new doesn't mean it lacks importance or significance, and removing it can have unforeseen consequences.
 Ignoring the historical and constitutional significance of the "under God" line in the Pledge of Allegiance is a dangerous oversimplification that fails to recognize the phrase's cultural and symbolic importance to American identity.
@@ -44,8 +56,8 @@ Ignoring the historical and constitutional significance of the "under God" line 
 
 ##### 数据集描述
 该数据集为中文数据集，来源于2007至2021年的近700场知名华语辩论比赛，经由语音转译及人工校验得到了每场比赛的单环节、单方陈词文本，由标注员进行了论点句和互动论点对等标注，整理为带格式的txt文件。
-##### 输入样例
-输入：公众事件中不应该批评不完美受害者
+##### 数据样例
+输入：公众事件中不应该批评不完美受害者  
 输出：
 将矛头调转向批评不完美的受害者，使受害者与加害者之间的力量进一步失衡，不符合媒体伦理。
 舆论的变动可能影响案件的走向。
@@ -59,6 +71,18 @@ Ignoring the historical and constitutional significance of the "under God" line 
 |  论点生成    |   Mengzi   |  0.101    |
 
 **请注意：参赛模型的指标如果低于基线，则无法参与后续评奖。**
+
+#### 提交格式
+评测使用邮箱提交结果。参赛队伍需要将包含结果文件的邮件发送至邮箱liumingrui@uir.edu.cn，邮件的标题为“Competition-参赛队名”，邮件附件为任务的结果文件。结果文件为无BOM的以utf-8为编码格式的txt文件，使用逗号“,”作为分隔符，使用“\n”作为每行结尾的换行符，任务二的命名格式为：参赛队名_任务2_子任务x.txt。
+
+例如：参赛队名为“Winners”，则提交文件名为“Winners_任务2_子任务1.txt”和“Winners_任务2_子任务2.txt”的两个结果文件。两个任务提交结果的样例格式如下（提交的结果文件格式不正确不予计算成绩）：
+
+| new_id | label |
+| ----- | ----- |
+|  Achievement and Taking Action  |   what would oing my best achieve that i do not already have?    |  if you miss, you may hit a star.
+|  2  |   FALSE   |
+| ... |    ...    |
+
 
 ## 奖金
 
