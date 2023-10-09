@@ -48,7 +48,8 @@
 输入：Should the phrase "under God" be retained in the Pledge of Allegiance?<tab>the under God line is actually a relatively new addition and can therefore be easily removed without significant consequences.  
 输出：
 Just because something is new doesn't mean it lacks importance or significance, and removing it can have unforeseen consequences.
-Ignoring the historical and constitutional significance of the "under God" line in the Pledge of Allegiance is a dangerous oversimplification that fails to recognize the phrase's cultural and symbolic importance to American identity.
+Ignoring the historical and constitutional significance of the "under God" line in the Pledge of Allegiance is a dangerous oversimplification that fails to recognize the phrase's cultural and symbolic importance to American identity.  
+......
 
 基于辩题的论点生成任务（中文数据集）：数据集来源于2007至2021年的近700场知名华语辩论比赛，经由语音转译及人工校验得到了每场比赛的单环节、单方陈词文本，由标注员进行了论点句和互动论点对等标注，整理为带格式的txt文件。
 
@@ -61,9 +62,9 @@ Ignoring the historical and constitutional significance of the "under God" line 
 ##### 数据样例
 输入：公众事件中不应该批评不完美受害者  
 输出：
-将矛头调转向批评不完美的受害者，使受害者与加害者之间的力量进一步失衡，不符合媒体伦理。
-舆论的变动可能影响案件的走向。
-如果秉持着应该批评不完美的心态，无疑会使得将来更少受害者敢于向公众发声。
+将矛头调转向批评不完美的受害者，使受害者与加害者之间的力量进一步失衡，不符合媒体伦理。  
+舆论的变动可能影响案件的走向。  
+如果秉持着应该批评不完美的心态，无疑会使得将来更少受害者敢于向公众发声。  
 
 ##### 提交格式
 评测使用邮箱提交结果。参赛队伍需要将包含结果文件的邮件发送至邮箱liumingrui@uir.edu.cn，邮件的标题为“Competition-参赛队名”，邮件附件为任务的结果文件。结果文件为无BOM的以utf-8为编码格式的txt文件，使用逗号“,”作为分隔符，使用“\n”作为每行结尾的换行符，任务二的命名格式为：参赛队名_任务2_子任务x.txt。
