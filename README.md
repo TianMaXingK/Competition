@@ -17,13 +17,6 @@
 
 本任务的文件夹中包括所有文件数据，文件夹内具有ID的子文件夹代表一则微博的信息，子文件夹内的json文件包括该微博的文本、用户、评论、转发信息，其他文件则为该微博附带的图片。
 json文件内的字段说明如下：
-
-| Track | Model |Rouge-L Score|
-| ----- | ----- | ----|
-|  反论点生成  |   GPT-2    |  0.143    |
-|  论点生成    |   Mengzi   |  0.101    |
-
-
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=588
  style='width:441.0pt;border-collapse:collapse'>
  <tr style='height:14.15pt'>
@@ -417,6 +410,13 @@ json文件内的字段说明如下：
  </tr>
 </table>
 
+除以上json文件外，本任务还为参赛选手们提供了汇总的info.xlsx文件，该文件存储了微博的ID（已脱敏）、创建时间、源文本内容以及图片信息，字段说明如下：
+| 字段 | 说明 |
+| ----- | ----- |
+|  new_id      |   脱敏后ID     |
+|  created_at  |   信源发布时间 |
+|  text        |   信源文本     |
+|  pic         |   信源包含的图片文件 |
 
 #### 评测指标描述
 本任务以Marco F1值作为评测指标。
