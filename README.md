@@ -470,36 +470,28 @@ Ignoring the historical and constitutional significance of the "under God" line 
 如果秉持着应该批评不完美的心态，无疑会使得将来更少受害者敢于向公众发声。  
 
 ##### 提交格式
-评测使用邮箱提交结果。参赛队伍需要将包含结果文件的邮件发送至邮箱liumingrui@uir.edu.cn，邮件的标题为“Competition-参赛队名”，邮件附件为任务的结果文件。结果文件为无BOM的以utf-8为编码格式的txt文件，使用逗号“,”作为分隔符，使用“\n”作为每行结尾的换行符，任务二的命名格式为：参赛队名_任务2_子任务x.txt。
+评测使用邮箱提交结果。参赛队伍需要将包含结果文件的邮件发送至邮箱liumingrui@uir.edu.cn，邮件的标题为“Competition-参赛队名”，邮件附件为任务的结果文件。结果文件为无BOM的以utf-8为编码格式的txt文件，使用逗号“,”作为分隔符，使用“\n”作为每行结尾的换行符，任务二的命名格式为：参赛队名_任务2_子任务x.txt。  
 
 例如：参赛队名为“Winners”，则提交文件名为“Winners_任务2_子任务1.txt”和“Winners_任务2_子任务2.txt”的两个结果文件。两个任务提交结果的样例格式如下（提交的结果文件格式不正确不予计算成绩）：
 
-| new_id | label |
-| ----- | ----- |
-|  Achievement and Taking Action  |   what would oing my best achieve that i do not already have?    |  if you miss, you may hit a star.
-|  2  |   FALSE   |
-| ... |    ...    |
-
 #### 评测指标描述
-两个子任务均以ROUGE-L值作为评测指标。以下为基线模型的分数：
+两个子任务均以ROUGE-L值作为评测指标。以下为基线模型的分数，参赛模型的指标如果低于基线，则无法参与后续评奖。
 | Track | Model |Rouge-L Score|
 | ----- | ----- | ----|
 |  反论点生成  |   GPT-2    |  0.143    |
 |  论点生成    |   Mengzi   |  0.101    |
-
-**请注意：参赛模型的指标如果低于基线，则无法参与后续评奖。**
-
 
 
 ## 奖金
 
 ## 报名网站
 参赛数据集将会在填写报名表后1~2个工作日内发放
-[谣言检测任务评测报名表](https://docs.qq.com/form/page/DYVBhY09aV3dLakt4)
+[认知博弈评测报名表](https://docs.qq.com/form/page/DYVBhY09aV3dLakt4)
+【腾讯文档】
 
 ## 注意事项
 1.	本次评测使用的数据集由网络获取，仅限于本次技术评测及学术研究使用，未经许可不能作为商业用途或其他目的。
-2.	如需使用本数据集进行课题研究及论文发表，请联系：liumingrui@uir.edu.cn。
+2.	如需使用本数据集进行课题研究及论文发表，请联系评测工作人员：liumingrui@uir.edu.cn。
 3.	仅允许使用所有参赛者均可获得的开源代码、工具以及外部数据。
 4.	算法与系统的知识产权归参赛队伍所有，要求最终结果排名前5的队伍提供算法代码与系统报告（包括方法说明、数据处理、参考文献和使用开源工具等信息），供会议交流。
 5.	奖金可折算为差旅费使用。
@@ -510,7 +502,7 @@ Ignoring the historical and constitutional significance of the "under God" line 
 | 事项  | 时间 |
 | ------------- | ------------- |
 | 任务发布与报名启动  | 2023年10月1日  |
-| 测试集数据发布  | 2023年10月7日  |
+| 数据集发布  | 2023年10月7日  |
 | 提交截止（报名结束）  | 2023年11月10日  |
 | 比赛结果公布  | 2023年11月12日  |
 | 评测论坛 | 2023年11月24日（暂定）  |
@@ -519,7 +511,6 @@ Ignoring the historical and constitutional significance of the "under God" line 
 
 ## 评测论坛安排
 
-## 评委会成员
-
-## 会务组成员
+## 评测评委会委员
+李斌阳 魏忠钰 毛存礼 李岩 孔祥宇 柳明睿 陈蕾
 
