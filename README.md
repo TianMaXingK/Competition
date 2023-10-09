@@ -15,6 +15,409 @@
 3. 测试数据集为多模态数据，单个待测试数据样本除了文本之外，可能还包括图像信息。  
 4. 测试数据集中，部分数据会包含互动信息。
 
+本任务的文件夹中包括所有文件数据，文件夹内具有ID的子文件夹代表一则微博的信息，子文件夹内的json文件包括该微博的文本、用户、评论、转发信息，其他文件则为该微博附带的图片。
+json文件内的字段说明如下：
+
+| Track | Model |Rouge-L Score|
+| ----- | ----- | ----|
+|  反论点生成  |   GPT-2    |  0.143    |
+|  论点生成    |   Mengzi   |  0.101    |
+
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=588
+ style='width:441.0pt;border-collapse:collapse'>
+ <tr style='height:14.15pt'>
+  <td width=73 nowrap style='width:55.0pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><b><span
+  style='font-family:宋体;color:black'>字段</span></b></p>
+  </td>
+  <td width=120 nowrap style='width:90.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><b><span
+  style='font-family:宋体;color:black'>子字段</span></b></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><b><span
+  style='font-family:宋体;color:black'>说明</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=193 nowrap colspan=2 style='width:145.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>id</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=73 nowrap rowspan=6 style='width:55.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>content</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>created_at</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源发布时间</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>text</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源文本</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>comments_count</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源评论数</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>reposts_count</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源转发数</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>attitudes_count</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源点赞数</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>created_at_str</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>信源发布时间字符串</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=73 nowrap rowspan=7 style='width:55.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>user</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>uid</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>description</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户描述</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>follow_count</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户关注数</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>followers_count</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户粉丝数</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>gender</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户性别</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>verified</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户是否认证，共两类：</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>true</span><span style='font-family:宋体;color:black'>认证用户、</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>false</span><span
+  style='font-family:宋体;color:black'>非认证用户</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>verified_reason</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户认证理由</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=73 nowrap rowspan=4 style='width:55.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>comments</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>id</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>评论</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>created_at</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>评论时间</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>text</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>评论文本</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>uid</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=73 nowrap rowspan=6 style='width:55.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>reposts</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>id</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>转发</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>created_at</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>转发时间</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>raw_text</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>转发附带评论纯文本</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>text</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>转发附带评论文本</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>pid</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>转发父节点</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.15pt'>
+  <td width=120 nowrap style='width:90.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-family:"Times New Roman",serif;color:black'>uid</span></p>
+  </td>
+  <td width=395 nowrap style='width:296.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.15pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+  宋体;color:black'>用户</span><span lang=EN-US style='font-family:"Times New Roman",serif;
+  color:black'>ID (</span><span style='font-family:宋体;color:black'>已脱敏</span><span
+  lang=EN-US style='font-family:"Times New Roman",serif;color:black'>)</span></p>
+  </td>
+ </tr>
+</table>
+
+
 #### 评测指标描述
 本任务以Marco F1值作为评测指标。
 
