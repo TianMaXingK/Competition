@@ -452,8 +452,6 @@ Just because something is new doesn't mean it lacks importance or significance, 
 Ignoring the historical and constitutional significance of the "under God" line in the Pledge of Allegiance is a dangerous oversimplification that fails to recognize the phrase's cultural and symbolic importance to American identity.  
 ......
 
-基于辩题的论点生成任务（中文数据集）：数据集来源于2007至2021年的近700场知名华语辩论比赛，经由语音转译及人工校验得到了每场比赛的单环节、单方陈词文本，由标注员进行了论点句和互动论点对等标注，整理为带格式的txt文件。
-
 #### 子任务二：基于辩题的论点生成
 
 ##### 数据集描述
@@ -488,7 +486,7 @@ Ignoring the historical and constitutional significance of the "under God" line 
 1.	本次评测使用的数据集由网络获取，仅限于本次技术评测及学术研究使用，未经许可不能作为商业用途或其他目的。
 2.	如需使用本数据集进行课题研究及论文发表，请联系评测工作人员。
 3.	仅允许使用所有参赛者均可获得的开源代码、工具以及外部数据。
-4.	算法与系统的知识产权归参赛队伍所有，要求最终结果排名前5的队伍提供算法代码与系统报告（包括方法说明、数据处理、参考文献和使用开源工具等信息），供会议交流。
+4.	算法与系统的知识产权归参赛队伍所有，要求最终结果排名前6的队伍提供算法代码与系统报告（包括方法说明、数据处理、参考文献和使用开源工具等信息），供会议交流。
 5.	奖金可折算为差旅费使用。
 6.	本评测联系人：柳明睿（liumingrui@uir.edu.cn）
 
