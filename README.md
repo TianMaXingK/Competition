@@ -505,5 +505,5 @@ Ignoring the historical and constitutional significance of the "under God" line 
 ## 评测论坛安排
 （待定）
 ## 评测评委会委员
-李斌阳   魏忠钰   毛存礼   李岩   孔祥宇   柳明睿   陈蕾
+李斌阳 魏忠钰 毛存礼 李岩 孔祥宇 柳明睿 陈蕾
 
